@@ -40,5 +40,5 @@ echo ''
 #this script will display the list of 10 largest files
 echo 'List of 10 Largest Files'
 echo '============='
-find / -type f -exec ls -l --block-size=MB {} + 2>/dev/null | sort -k5 -hr | head -n 10| awk '{print '$5', '$3', '$9'}'
+find / -type f -exec ls -l --block-size=MB {} + 2>/dev/null | sort -k5 -hr | head -n 10| awk '{print $5, $3, $9}'
 echo ''
