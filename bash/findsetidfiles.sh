@@ -31,7 +31,7 @@ echo ""
 echo 'Setgid Files:-'
 echo '============='
 #2000 permission is set to to the script
-find /type f -executable -permission -2000 -ls 2>/dev/null | sort -k 5
+find / -type -f -executable -permission -2000 -ls 2>/dev/null | sort -k 3
 echo ''
 
 # commands to display a third title
