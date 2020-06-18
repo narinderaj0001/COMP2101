@@ -18,8 +18,42 @@
 # Variables   #
 ###############
 title="Overlord"
-myname="dennis"
-hostname="myhostname"
+myname="Narinder"
+hostname=$(hostname)
+
+#Capturing the date and time
+day=$(date +%A)
+hour=$(date +%I)
+minute=$(date +%M)
+meridian=$(date +%p)
+
+echo "Today is  $day and the time is $hour:$minute. The meridian is: $meridian"
+
+#using the conditional operators for representing the values
+if [ $day == "Monday" ]
+then
+  title="I hate Monday"
+elif [ $day == "Tuesday" ]
+then
+  title="Tuesdy will be cold"
+elif [ $day == "Wednesdy" ]
+then
+  title=" Wednesday is third day of week "
+elif [ $day == "THursday" ]
+then
+  title="Thursday will be a  wedding"
+elif [ $day == "Friday" ]
+then
+  title="Friday is the last working day"
+elif [ $day == "Saturday" ]
+then
+  title="Party on Saturday"
+elif [ $day == "Sunday" ]
+then
+  title="I love Sunday"
+
+
+fi
 
 ###############
 # Main        #

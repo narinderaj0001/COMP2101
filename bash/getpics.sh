@@ -17,6 +17,12 @@ test -f ~/Pictures/pics.zip || wget -q -O ~/Pictures/pics.zip http://zonzorp.net
 # unpack the downloaded zipfile if it is there, then delete the local copy of the zipfile
 test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && rm ~/Pictures/pics.zip
 
+#Downloading a tarfile to the pictures directory if it was not there already
+test -f ~Pictures/pics.tgz || wget -q -0 ~/Pictures/pics.tgz http://zoncorp.net/pics/tgz
+
+#Unzipping the tarfile and deleting the local copy of thr same files
+test -f ~Pictures/pics.tgz && tar -C ~/Pictures -xzf ~/Pictures/pics.tgz && rm ~/Pictures/pics.tgz
+
 # Make a report on what we have in the Pictures directory
 test -d ~/Pictures && cat <<EOF
 Found $(find ~/Pictures -type f|wc -l) files in the Pictures directory.
